@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo — 300 Prompts Poderosos para ChatGPT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#111b2d;
+      --soft:#0f172a;
+      --text:#e5e7eb;
+      --muted:#a3aed0;
+      --brand1:#6366f1;
+      --brand2:#22d3ee;
+      --accent:#ec4899;
+      --card:#0a0f1d;
+      --ring:rgba(99,102,241,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:radial-gradient(1200px 600px at 80% -10%,rgba(34,211,238,.18),transparent 60%),
+                 radial-gradient(1200px 600px at 10% -20%,rgba(236,72,153,.12),transparent 60%), var(--bg);
+      color:var(--text); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.65;
+    }
+    a{color:#a5b4fc}
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.1) blur(10px);
+      background:linear-gradient(90deg, rgba(99,102,241,.85), rgba(34,211,238,.85));
+      box-shadow: 0 4px 24px rgba(0,0,0,.25);
+      border-bottom:1px solid rgba(255,255,255,.12);
+    }
+    .bar{
+      max-width:1200px; margin:0 auto; padding:18px 20px; display:flex; gap:18px; align-items:center; flex-wrap:wrap
+    }
+    h1{font-size:1.35rem; margin:0; font-weight:800; letter-spacing:.2px; color:white}
+    .subtitle{font-size:.92rem; opacity:.9}
+    .search{
+      display:flex; align-items:center; gap:10px; flex:1 1 340px; min-width:260px; background:rgba(255,255,255,.12);
+      padding:10px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.18)
+    }
+    .search input{
+      all:unset; width:100%; font-size:.98rem; color:white
+    }
+    .container{max-width:1200px; margin:24px auto; padding:0 20px; display:grid; grid-template-columns:260px 1fr; gap:22px}
+    @media (max-width:1000px){ .container{grid-template-columns:1fr} }
+    .side{
+      position:sticky; top:86px; align-self:start; background:var(--panel); border:1px solid rgba(255,255,255,.08);
+      border-radius:14px; padding:14px; box-shadow:0 8px 28px rgba(0,0,0,.25)
+    }
+    .side h3{margin:6px 8px 10px; font-size:.95rem; color:#c7d2fe; letter-spacing:.2px}
+    .nav{display:flex; flex-direction:column; gap:6px}
+    .nav a{
+      text-decoration:none; color:var(--text); font-weight:600; font-size:.95rem; padding:10px 12px; border-radius:10px;
+      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,0));
+      border:1px solid rgba(255,255,255,.06)
+    }
+    .nav a:hover{background:rgba(99,102,241,.12); border-color:rgba(99,102,241,.35)}
+    .section{
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));
+      border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:22px; margin-bottom:18px
+    }
+    .section h2{margin:0 0 4px; font-size:1.25rem; color:#a5b4fc}
+    .section .goal{margin:0 0 14px; color:var(--muted); font-size:.95rem}
+    .badge{
+      display:inline-block; padding:4px 10px; border-radius:999px; font-size:.78rem; font-weight:700;
+      background:linear-gradient(90deg,rgba(99,102,241,.2),rgba(34,211,238,.2)); color:#c7d2fe; border:1px solid var(--ring)
+    }
+    ol.prompts{margin:0; padding-left:22px}
+    ol.prompts li{
+      margin:10px 0; padding:12px 12px; background:var(--card); border-left:4px solid var(--brand1); border-radius:8px;
+      list-style:decimal; transition:transform .15s, background .15s, border-color .15s
+    }
+    ol.prompts li:hover{transform:translateX(4px); background:#0e1530; border-color:var(--brand2)}
+    .top{position:fixed; right:18px; bottom:18px; padding:10px 12px; border-radius:10px; background:var(--panel);
+      border:1px solid rgba(255,255,255,.12); cursor:pointer; font-weight:700; color:#c7d2fe; display:none}
+    .tips{margin:8px 0 24px; font-size:.88rem; color:#9fb0d5}
+    footer{max-width:1200px; margin:20px auto 60px; padding:0 20px; color:#93a4c7; text-align:center}
+    .count{font-size:.85rem; color:#9fb0d5; margin-left:8px}
+    mark{background:transparent; color:#ffffff; padding:0}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="bar">
+      <div>
+        <h1>🚀 Catálogo com 300 Prompts Poderosos para ChatGPT</h1>
+        <div class="subtitle">Use com ChatGPT e acelere resultados em Marketing, Vendas, Copy, Automação e muito mais.</div>
+      </div>
+      <label class="search" title="Digite para filtrar por palavra-chave">
+        🔎
+        <input id="q" placeholder="Buscar por palavra-chave (ex.: Instagram, e-mail, funil, Notion...)" />
+      </label>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Navegação lateral -->
+    <aside class="side">
+      <h3>📚 Seções</h3>
+      <nav class="nav">
+        <a href="#marketing">1) Marketing Digital <span class="count">(40)</span></a>
+        <a href="#copywriting">2) Copywriting & Gatilhos <span class="count">(40)</span></a>
+        <a href="#vendas">3) Vendas & Persuasão <span class="count">(30)</span></a>
+        <a href="#conteudo">4) Conteúdo Criativo <span class="count">(30)</span></a>
+        <a href="#automacao">5) Automação com IA <span class="count">(30)</span></a>
+        <a href="#negocios">6) Empreendedorismo & Negócios <span class="count">(30)</span></a>
+        <a href="#design">7) Design, Branding & Criatividade <span class="count">(30)</span></a>
+        <a href="#atendimento">8) Atendimento & Pós-Venda <span class="count">(30)</span></a>
+        <a href="#cursos">9) Criadores de Curso & Infoprodutores <span class="count">(30)</span></a>
+        <a href="#bonus">10) BÔNUS – Ferramentas & Plataformas <span class="count">(30)</span></a>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo -->
+    <main>
+
+      <p class="tips">💡 Dica: use os colchetes <code>[assim]</code> para personalizar cada prompt com seu nicho, público, oferta ou tema.</p>
+
+      <!-- 1. Marketing Digital -->
+      <section id="marketing" class="section">
+        <h2>📢 Marketing Digital <span class="badge">40 Prompts</span></h2>
+        <p class="goal">Objetivo: Criar estratégias, gerar ideias de conteúdo, campanhas, planejamento e presença online.</p>
+        <ol class="prompts">
+          <li>Crie um calendário de conteúdo para Instagram de um mês para um negócio de [Nicho], com foco em engajamento e conversão.</li>
+          <li>Gere 10 ideias de postagens virais para Instagram Reels sobre [tema].</li>
+          <li>Monte uma campanha de lançamento para um produto digital voltado para [público-alvo], com etapas, objetivos e canais.</li>
+          <li>Crie um funil de e-mails para capturar leads interessados em [produto ou serviço], com 5 etapas.</li>
+          <li>Quais são as melhores estratégias de marketing digital para um negócio de [tipo]? Faça uma análise detalhada.</li>
+          <li>Crie uma estratégia de marketing de conteúdo para um canal no YouTube focado em [tema].</li>
+          <li>Desenvolva uma estratégia de inbound marketing para atrair clientes interessados em [serviço/produto].</li>
+          <li>Sugira 10 ideias de lead magnet para um infoprodutor que atua com [tema].</li>
+          <li>Crie um planejamento semanal de postagens para TikTok, com foco em viralização, para o nicho de [nicho].</li>
+          <li>Crie um post de carrossel para Instagram ensinando algo útil sobre [tema], com CTA ao final.</li>
+          <li>Liste as melhores hashtags para aumentar o alcance de conteúdos sobre [tema].</li>
+          <li>Explique como fazer um lançamento semente para um curso online sobre [assunto].</li>
+          <li>Crie 5 scripts curtos para vídeos no TikTok sobre [assunto], com tom envolvente e objetivo.</li>
+          <li>Monte uma sequência de 3 e-mails para nutrir leads sobre [tema], com storytelling.</li>
+          <li>Crie um roteiro para live de vendas de um produto digital voltado a [público].</li>
+          <li>Elabore um roteiro de vídeo para YouTube que resolva um problema comum do público interessado em [tema].</li>
+          <li>Crie um texto de descrição para perfil no Instagram profissional voltado a [tema].</li>
+          <li>Sugira 5 ações de marketing de guerrilha para divulgar um produto de [categoria].</li>
+          <li>Crie um plano de marketing de 90 dias para lançamento de um e-book sobre [tema].</li>
+          <li>Crie um anúncio patrocinado para Facebook Ads promovendo um curso de [tema].</li>
+          <li>Como aumentar o engajamento orgânico em uma página do Instagram sobre [assunto]?</li>
+          <li>Crie um plano de conteúdo para Pinterest sobre [nicho], com ideias de pins e títulos.</li>
+          <li>Quais são as estratégias para usar inteligência artificial no marketing digital de um infoprodutor?</li>
+          <li>Crie uma copy para anúncio no Google Ads para um serviço de [tema].</li>
+          <li>Como utilizar o marketing de influência para vender um produto de [nicho]?</li>
+          <li>Crie um fluxo de nutrição com 5 e-mails para um lead que baixou um e-book sobre [tema].</li>
+          <li>Gere uma campanha de lançamento estilo “perpétuo” para um infoproduto.</li>
+          <li>Crie 3 ideias de desafio gratuito de 5 dias para captar leads no nicho de [tema].</li>
+          <li>Quais KPIs devo acompanhar em uma campanha de tráfego pago para [produto]?</li>
+          <li>Crie um CTA forte para final de postagem no Instagram sobre [tema].</li>
+          <li>Sugira 10 títulos atrativos para vídeos no YouTube sobre [tema].</li>
+          <li>Crie um post de LinkedIn para atrair clientes B2B no setor de [nicho].</li>
+          <li>Monte um conteúdo de blog otimizado para SEO sobre [tema].</li>
+          <li>Quais são os gatilhos mentais mais eficazes para atrair audiência em redes sociais?</li>
+          <li>Crie um quiz interativo para captar leads interessados em [tema].</li>
+          <li>Crie uma sequência de mensagens para um bot no WhatsApp que venda [produto/serviço].</li>
+          <li>Crie uma série de 5 conteúdos estilo storytelling sobre bastidores de um produto digital.</li>
+          <li>Sugira 5 temas de lives para Instagram com foco em autoridade e vendas.</li>
+          <li>Crie uma copy para banner de site vendendo um serviço de [tema].</li>
+          <li>Como estruturar uma campanha de remarketing eficaz para e-commerce de [produto]?</li>
+        </ol>
+      </section>
+
+      <!-- 2. Copywriting -->
+      <section id="copywriting" class="section">
+        <h2>✍️ Copywriting e Gatilhos Mentais <span class="badge">40 Prompts</span></h2>
+        <p class="goal">Objetivo: Criar textos persuasivos, chamadas de ação e comunicações impactantes usando técnicas de copywriting e gatilhos mentais.</p>
+        <ol class="prompts">
+          <li>Escreva uma copy curta e persuasiva para vender um curso online de [tema] usando os gatilhos de urgência e escassez.</li>
+          <li>Crie um texto para página de vendas com storytelling para um produto voltado para [público-alvo].</li>
+          <li>Escreva 3 versões de headline para anúncio de um serviço de [tipo], usando provas sociais.</li>
+          <li>Crie uma copy estilo “AIDA” para vender um e-book sobre [tema].</li>
+          <li>Desenvolva uma carta de vendas longa para um infoproduto voltado a [perfil de cliente].</li>
+          <li>Gere uma sequência de 5 mensagens de WhatsApp para um funil de vendas, usando reciprocidade.</li>
+          <li>Crie uma descrição de produto com foco em transformação e diferenciação.</li>
+          <li>Transforme esse texto técnico em uma copy mais emocional e fácil de entender: “[cole aqui o texto]”</li>
+          <li>Crie 10 variações de CTA (call to action) para aumentar cliques em anúncios sobre [tema].</li>
+          <li>Crie um post com uma história pessoal que leve à venda de um produto de [nicho].</li>
+          <li>Escreva uma headline provocativa com o gatilho da curiosidade para atrair atenção no Instagram.</li>
+          <li>Crie um pitch de vendas de 1 minuto para apresentar um produto de [tema] em vídeo.</li>
+          <li>Gere uma sequência de copy para e-mail marketing com tom emocional e objetivo claro.</li>
+          <li>Reescreva esse parágrafo de vendas para torná-lo mais persuasivo e direto: “[cole aqui o parágrafo]”</li>
+          <li>Quais são os melhores gatilhos mentais para vender um serviço de consultoria em [tema]?</li>
+          <li>Crie uma copy comparativa mostrando como seu produto é superior à concorrência.</li>
+          <li>Crie uma frase de efeito para abrir uma página de vendas de um produto inovador.</li>
+          <li>Escreva uma copy com foco em dor e solução para um produto voltado a [problema do público].</li>
+          <li>Gere uma introdução envolvente para uma carta de vendas de alta conversão.</li>
+          <li>Crie uma copy estilo “antes-depois-pontes” para uma landing page de captura.</li>
+          <li>Escreva 5 variações de textos curtos para anúncios de tráfego pago em Facebook Ads.</li>
+          <li>Crie uma bio para Instagram com tom de autoridade para um profissional de [área].</li>
+          <li>Elabore uma descrição de serviço que transmita confiança e segurança para [tipo de cliente].</li>
+          <li>Transforme essa lista de benefícios em uma copy com foco em transformação e emoção: [lista aqui].</li>
+          <li>Escreva uma copy divertida e criativa para divulgar um produto de [categoria] no TikTok.</li>
+          <li>Crie um roteiro de vídeo persuasivo com foco em dor, promessa e prova.</li>
+          <li>Crie uma copy para uma landing page com foco em geração de leads qualificados.</li>
+          <li>Escreva um texto que convença o cliente indeciso a finalizar a compra.</li>
+          <li>Crie 3 frases com autoridade e escassez para aplicar em uma oferta relâmpago.</li>
+          <li>Gere um parágrafo de vendas com base em depoimentos de clientes satisfeitos.</li>
+          <li>Reescreva uma copy de vendas para torná-la mais empática e personalizada.</li>
+          <li>Crie um texto para anúncio com o foco no "custo da inação".</li>
+          <li>Monte uma sequência de e-mails para recuperação de carrinho abandonado.</li>
+          <li>Crie uma copy com foco em microcompromissos para aumentar conversão em uma landing.</li>
+          <li>Gere 10 frases de abertura com impacto emocional para vídeos de vendas.</li>
+          <li>Crie uma copy de lançamento usando os 6 gatilhos mentais principais.</li>
+          <li>Desenvolva uma campanha com foco em pertencimento e comunidade para vender um curso.</li>
+          <li>Escreva uma mensagem direta para inbox vendendo uma consultoria de [tema].</li>
+          <li>Crie um post com frases persuasivas para uma campanha de reengajamento.</li>
+          <li>Gere uma sequência de mensagens para um chatbot com tom humano e persuasivo.</li>
+        </ol>
+      </section>
+
+      <!-- 3. Vendas -->
+      <section id="vendas" class="section">
+        <h2>💼 Vendas e Persuasão <span class="badge">30 Prompts</span></h2>
+        <p class="goal">Objetivo: Aumentar conversões, responder objeções, criar scripts de vendas e dominar a arte da persuasão com IA.</p>
+        <ol class="prompts">
+          <li>Crie um script de vendas por WhatsApp para vender [produto/serviço] com foco em empatia e urgência.</li>
+          <li>Simule uma conversa de fechamento de vendas com um cliente indeciso sobre comprar [produto].</li>
+          <li>Liste as 10 principais objeções que clientes têm ao comprar [tipo de produto] e como rebatê-las.</li>
+          <li>Crie um roteiro de ligação de vendas com foco em necessidade, valor e urgência.</li>
+          <li>Escreva um pitch de 30 segundos para apresentar um serviço de [tema] em uma reunião de negócios.</li>
+          <li>Gere uma resposta persuasiva para a seguinte objeção: “[escreva aqui a objeção]”.</li>
+          <li>Crie um modelo de proposta comercial para vender [serviço ou produto] de forma clara e objetiva.</li>
+          <li>Escreva uma mensagem de follow-up para quem demonstrou interesse mas não fechou a compra.</li>
+          <li>Crie um pitch de vendas para ser usado em eventos de networking e feiras de negócios.</li>
+          <li>Gere uma sequência de mensagens automáticas para um funil de vendas via e-mail.</li>
+          <li>Crie uma abordagem inicial para prospectar leads frios no Instagram de forma gentil e profissional.</li>
+          <li>Simule uma negociação com um cliente que quer desconto no seu serviço.</li>
+          <li>Escreva um modelo de mensagem de boas-vindas para novos leads captados em uma campanha.</li>
+          <li>Crie uma apresentação de vendas em formato de roteiro para apresentar um software para empresas.</li>
+          <li>Como posso gerar senso de urgência para um produto digital em lançamento contínuo?</li>
+          <li>Crie uma resposta educada e estratégica para um cliente que pediu para "pensar mais um pouco".</li>
+          <li>Escreva um texto que transforme características do produto [X] em benefícios claros e persuasivos.</li>
+          <li>Crie um e-mail de reativação de leads que já passaram do funil e não compraram.</li>
+          <li>Monte uma sequência de gatilhos mentais para usar em um vídeo de vendas de [tema].</li>
+          <li>Simule uma conversa de vendas com um lead que está comparando seu produto com o da concorrência.</li>
+          <li>Escreva uma mensagem de agradecimento que também convide o cliente a comprar um produto complementar.</li>
+          <li>Crie um modelo de proposta irresistível para fechar pacotes com ticket alto.</li>
+          <li>Gere um modelo de texto para remarketing de leads que clicaram, mas não converteram.</li>
+          <li>Crie uma mensagem persuasiva para enviar no direct do Instagram oferecendo uma consultoria gratuita.</li>
+          <li>Quais argumentos posso usar para vender um produto digital para um público cético?</li>
+          <li>Escreva um roteiro de vídeo curto para vendas com estrutura de problema → solução → prova → chamada.</li>
+          <li>Gere uma estrutura de script para fechar vendas em vídeo chamada com leads de alto valor.</li>
+          <li>Crie uma pergunta de qualificação para saber se um lead está pronto para comprar.</li>
+          <li>Monte um mini roteiro de 3 etapas para vender no inbox com gatilho de reciprocidade.</li>
+          <li>Crie uma série de frases curtas para usar no status do WhatsApp e gerar curiosidade sobre [produto/serviço].</li>
+        </ol>
+      </section>
+
+      <!-- 4. Conteúdo Criativo -->
+      <section id="conteudo" class="section">
+        <h2>🎨 Criação de Conteúdo Criativo <span class="badge">30 Prompts</span></h2>
+        <p class="goal">Objetivo: Gerar ideias inovadoras, conteúdos únicos e inspiradores para redes sociais, blogs, vídeos, campanhas e muito mais.</p>
+        <ol class="prompts">
+          <li>Crie 10 ideias de posts criativos para Instagram com foco em [tema/nicho].</li>
+          <li>Gere uma lista de temas virais para vídeos curtos no TikTok/Reels voltados para [público].</li>
+          <li>Crie um roteiro de vídeo criativo com storytelling para abordar [tema].</li>
+          <li>Escreva uma legenda cativante com tom de humor sobre [assunto].</li>
+          <li>Sugira 5 ideias de séries de conteúdo semanais para engajar audiência no Instagram.</li>
+          <li>Gere uma pauta de blog com foco em SEO para o tema “[tema principal]”.</li>
+          <li>Crie um carrossel de 5 slides para Instagram com dicas sobre [tema].</li>
+          <li>Transforme esse conteúdo técnico em algo simples e visual para redes sociais: “[conteúdo]”</li>
+          <li>Crie um desafio de 7 dias no Instagram para aumentar o engajamento sobre [tema].</li>
+          <li>Escreva um roteiro de podcast de 10 minutos sobre [assunto].</li>
+          <li>Gere ideias de conteúdo sazonal para campanhas criativas em datas comemorativas.</li>
+          <li>Crie um quadro semanal de conteúdo com nome criativo e formato original.</li>
+          <li>Escreva uma descrição de vídeo do YouTube que combine com esse título: “[título]”</li>
+          <li>Transforme esse artigo longo em um roteiro de vídeo curto com linguagem dinâmica.</li>
+          <li>Crie frases de impacto para usar como títulos de vídeos virais sobre [assunto].</li>
+          <li>Gere uma lista de 10 títulos magnéticos para blog posts sobre [tema].</li>
+          <li>Crie uma thread para X (Twitter) com conteúdo educativo e engajador sobre [assunto].</li>
+          <li>Sugira formatos interativos de conteúdo para Stories do Instagram sobre [tema].</li>
+          <li>Crie uma copy curta e criativa para divulgar um novo vídeo no canal.</li>
+          <li>Gere uma sequência de conteúdo para uma campanha de 7 dias com CTA no final de cada post.</li>
+          <li>Escreva um post inspirador com base na frase “[frase motivacional]”.</li>
+          <li>Transforme essa ideia em um conteúdo visual atrativo: “[ideia aqui]”</li>
+          <li>Crie 5 roteiros para vídeos curtos com base em mitos sobre [tema].</li>
+          <li>Gere ideias de títulos intrigantes com tom misterioso para atrair cliques.</li>
+          <li>Sugira um cronograma semanal de conteúdo para YouTube sobre [nicho].</li>
+          <li>Crie uma introdução impactante para um vídeo de conteúdo gratuito.</li>
+          <li>Gere uma frase criativa para divulgar lives com convidados especiais.</li>
+          <li>Crie um nome de campanha criativa para o lançamento de um novo projeto.</li>
+          <li>Crie um quadro de perguntas e respostas para engajar seguidores e gerar conteúdo.</li>
+          <li>Gere ideias de enquetes e quizzes criativos para engajar no Instagram.</li>
+        </ol>
+      </section>
+
+      <!-- 5. Automação -->
+      <section id="automacao" class="section">
+        <h2>🤖 Automação com IA <span class="badge">30 Prompts</span></h2>
+        <p class="goal">Objetivo: Automatizar tarefas, acelerar processos e integrar ferramentas usando a inteligência artificial como aliada.</p>
+        <ol class="prompts">
+          <li>Crie um fluxo de automação para responder mensagens no WhatsApp com base em palavras-chave.</li>
+          <li>Gere uma estrutura de automação para agendar reuniões automaticamente usando Google Calendar.</li>
+          <li>Crie um prompt para integrar ChatGPT com Zapier e gerar resumos automáticos de e mails.</li>
+          <li>Simule um fluxo de chatbot para atendimento inicial de clientes interessados em [produto/serviço].</li>
+          <li>Crie uma rotina de automação para gerar conteúdo diário com base em um calendário editorial.</li>
+          <li>Escreva um prompt para transformar entradas do Google Forms em relatórios automáticos.</li>
+          <li>Desenvolva um script para responder dúvidas frequentes sobre [tema] de forma automática.</li>
+          <li>Crie um fluxo com Make (Integromat) para salvar leads do Instagram em uma planilha.</li>
+          <li>Gere prompts para responder automaticamente dúvidas de clientes em um grupo de WhatsApp.</li>
+          <li>Crie um sistema para enviar lembretes automáticos de pagamento para clientes recorrentes.</li>
+          <li>Simule uma conversa automática de pré-venda com IA para qualificação de leads.</li>
+          <li>Gere um prompt para ChatGPT organizar automaticamente tarefas diárias com base em prioridade.</li>
+          <li>Crie um modelo de automação para enviar e-mails personalizados após eventos online.</li>
+          <li>Gere um fluxo de automação para criar posts automáticos com ChatGPT + Buffer.</li>
+          <li>Crie um assistente virtual para responder perguntas sobre produtos digitais.</li>
+          <li>Monte um sistema para gerar resumos de reuniões com base em gravações transcritas.</li>
+          <li>Escreva um fluxo de automação para captura e organização de depoimentos de clientes.</li>
+          <li>Crie um prompt que gere respostas automáticas para comentários em postagens de redes sociais.</li>
+          <li>Gere um sistema com IA para monitorar e classificar mensagens recebidas por urgência.</li>
+          <li>Crie uma automação que envie um e-book automaticamente após cadastro em uma landing page.</li>
+          <li>Monte um fluxo que conecte formulário do Google com CRM usando inteligência artificial.</li>
+          <li>Desenvolva um script para responder mensagens com emojis e tom leve usando IA.</li>
+          <li>Crie uma rotina de acompanhamento automático de leads não respondidos após 72h.</li>
+          <li>Crie um prompt que identifique palavras-chave em mensagens recebidas e acione respostas específicas.</li>
+          <li>Gere um sistema para análise de sentimentos em feedbacks de clientes.</li>
+          <li>Crie um modelo de assistente para explicar contratos ou termos técnicos de forma simples.</li>
+          <li>Desenvolva um assistente de produtividade com IA para organizar ideias e tarefas.</li>
+          <li>Crie um fluxo de automação para qualificação de leads via Telegram com respostas inteligentes.</li>
+          <li>Crie uma integração com ChatGPT para traduzir e adaptar e-mails automaticamente.</li>
+          <li>Gere um painel de controle com IA que resuma dados de vendas, leads e desempenho semanal.</li>
+        </ol>
+      </section>
+
+      <!-- 6. Negócios -->
+      <section id="negocios" class="section">
+        <h2>📈 Empreendedorismo e Negócios <span class="badge">30 Prompts</span></h2>
+        <p class="goal">Prompts para ajudar empreendedores a tomarem decisões estratégicas, inovarem e escalarem seus negócios.</p>
+        <ol class="prompts">
+          <li>Crie um modelo de negócio enxuto (canvas) para uma empresa de consultoria online.</li>
+          <li>Me ajude a analisar os concorrentes de um negócio de delivery saudável.</li>
+          <li>Gere ideias de diferenciação para uma loja de roupas sustentáveis.</li>
+          <li>Como estruturar uma apresentação de resultados para investidores?</li>
+          <li>Sugira um plano de ação para validar uma ideia de startup com baixo investimento.</li>
+          <li>Me dê um checklist para lançar um produto digital do zero.</li>
+          <li>Crie 3 personas para um negócio de serviços de marketing.</li>
+          <li>Quais são os principais erros de um empreendedor iniciante?</li>
+          <li>Monte uma matriz SWOT para um negócio de venda de cosméticos naturais.</li>
+          <li>Sugira 5 formas de gerar receita recorrente para um pequeno negócio.</li>
+          <li>Como aplicar o conceito de MVP em uma empresa de cursos online?</li>
+          <li>Me ajude a definir metas trimestrais realistas e mensuráveis.</li>
+          <li>Crie uma sequência de onboarding para novos colaboradores.</li>
+          <li>Elabore um pitch de 2 minutos para uma empresa de tecnologia educacional.</li>
+          <li>Quais métricas acompanhar em uma fase de pré-lançamento?</li>
+          <li>Me ajude a montar um cronograma de crescimento para 6 meses.</li>
+          <li>Dê ideias de eventos de networking para empreendedores locais.</li>
+          <li>Crie um questionário para entender melhor as dores do meu público-alvo.</li>
+          <li>Quais são os canais ideais de aquisição para um produto B2B?</li>
+          <li>Me ajude a criar um relatório mensal de desempenho do meu negócio.</li>
+          <li>Sugira ideias para um clube de assinaturas com foco em bem-estar.</li>
+          <li>Crie uma análise de risco para abertura de uma nova unidade física.</li>
+          <li>Me ajude a decidir entre duas propostas de sociedade.</li>
+          <li>Sugira um processo simples de gestão financeira para microempresas.</li>
+          <li>Como identificar gargalos na operação de um e-commerce?</li>
+          <li>Elabore um plano de contingência para um cenário de crise.</li>
+          <li>Dê ideias para campanhas de indicação entre clientes.</li>
+          <li>Me ajude a planejar a internacionalização do meu produto.</li>
+          <li>Como delegar tarefas de forma eficiente em uma pequena equipe?</li>
+          <li>Crie um documento de visão e missão com linguagem inspiradora.</li>
+        </ol>
+      </section>
+
+      <!-- 7. Design -->
+      <section id="design" class="section">
+        <h2>🎯 Design, Branding e Criatividade <span class="badge">30 Prompts</span></h2>
+        <p class="goal">Prompts para construir uma marca memorável, comunicar com impacto e usar o design como diferencial.</p>
+        <ol class="prompts">
+          <li>Crie um slogan curto e criativo para uma marca de acessórios femininos.</li>
+          <li>Sugira ideias de logo minimalista para um app de produtividade.</li>
+          <li>Como definir a voz da minha marca para redes sociais?</li>
+          <li>Quais elementos visuais transmitem confiança e autoridade?</li>
+          <li>Me ajude a escolher uma tipografia para um blog sobre inovação.</li>
+          <li>Crie uma apresentação institucional com visual moderno e colorido.</li>
+          <li>Sugira um nome criativo para uma agência de design.</li>
+          <li>Como manter a consistência visual da marca em diferentes plataformas?</li>
+          <li>Monte um guia de identidade visual para uma startup tech.</li>
+          <li>Quais são os erros comuns em rebranding e como evitá-los?</li>
+          <li>Me dê ideias para um mascote divertido para minha marca.</li>
+          <li>Crie um manifesto de marca com linguagem empática e jovem.</li>
+          <li>Sugira temas visuais para um calendário de conteúdo mensal.</li>
+          <li>Crie um modelo de capa de ebook no estilo criativo.</li>
+          <li>Quais cores transmitem inovação e tecnologia?</li>
+          <li>Crie 5 títulos de post de blog sobre design estratégico.</li>
+          <li>Monte um carrossel para Instagram sobre identidade visual.</li>
+          <li>Sugira uma animação curta para apresentar minha marca.</li>
+          <li>Quais elementos tornam um site mais atrativo e interativo?</li>
+          <li>Me ajude a desenhar um layout de portfólio criativo.</li>
+          <li>Como traduzir os valores da marca em elementos gráficos?</li>
+          <li>Dê ideias para embalagens sustentáveis com visual atrativo.</li>
+          <li>Me ajude a criar um moodboard com estilo jovem e criativo.</li>
+          <li>Crie um design de cartão de visita não convencional.</li>
+          <li>Sugira ícones originais para representar os valores da marca.</li>
+          <li>Me ajude a criar um template de apresentação com impacto visual.</li>
+          <li>Quais elementos visuais são tendência para 2025?</li>
+          <li>Me dê 3 ideias de ambientação visual para eventos da marca.</li>
+          <li>Crie um design de capa para canal no YouTube com foco em inovação.</li>
+          <li>Monte um kit de branding para lançamento de produto.</li>
+        </ol>
+      </section>
+
+      <!-- 8. Atendimento -->
+      <section id="atendimento" class="section">
+        <h2>🤝 Atendimento, Relacionamento e Pós-Venda <span class="badge">30 Prompts</span></h2>
+        <p class="goal">Prompts para melhorar a comunicação com o cliente, gerar fidelização e transformar o atendimento em diferencial competitivo.</p>
+        <ol class="prompts">
+          <li>Crie uma resposta educada para um cliente que pediu desconto fora do prazo.</li>
+          <li>Me ajude a montar um script de atendimento para WhatsApp.</li>
+          <li>Sugira um e-mail de agradecimento personalizado após uma compra.</li>
+          <li>Como transformar um cliente insatisfeito em promotor da marca?</li>
+          <li>Crie frases de boas-vindas para um novo cliente no onboarding.</li>
+          <li>Me dê ideias para um programa de fidelidade simples e eficiente.</li>
+          <li>Elabore um modelo de pesquisa de satisfação com 3 perguntas-chave.</li>
+          <li>Sugira formas de humanizar o atendimento digital.</li>
+          <li>Como lidar com críticas públicas nas redes sociais?</li>
+          <li>Me ajude a criar um plano de ação para reduzir churn.</li>
+          <li>Crie mensagens automáticas que soem naturais no atendimento.</li>
+          <li>Como surpreender positivamente um cliente após a compra?</li>
+          <li>Sugira um kit digital de boas-vindas para novos clientes.</li>
+          <li>Monte um calendário de contato pós-venda por 30 dias.</li>
+          <li>Me ajude a treinar minha equipe para atendimento consultivo.</li>
+          <li>Sugira frases empáticas para lidar com atrasos na entrega.</li>
+          <li>Crie um roteiro de ligação de pós-venda.</li>
+          <li>Me ajude a escrever uma política de reembolso clara e amigável.</li>
+          <li>Sugira 3 ações para transformar clientes em promotores.</li>
+          <li>Crie um modelo de resposta para feedbacks negativos.</li>
+          <li>Como personalizar o atendimento para aumentar a conversão?</li>
+          <li>Me ajude a criar uma base de respostas rápidas no Instagram.</li>
+          <li>Sugira formas de coletar depoimentos autênticos de clientes.</li>
+          <li>Crie um plano de encantamento para datas comemorativas.</li>
+          <li>Me dê ideias de brindes digitais para fidelização.</li>
+          <li>Sugira mensagens curtas para reativar clientes inativos.</li>
+          <li>Me ajude a montar uma sequência de e-mails para pós-compra.</li>
+          <li>Como usar o pós-venda como canal de upsell?</li>
+          <li>Me ajude a criar um painel de indicadores de atendimento.</li>
+          <li>Sugira um sistema de tickets simples para organizar demandas.</li>
+        </ol>
+      </section>
+
+      <!-- 9. Cursos -->
+      <section id="cursos" class="section">
+        <h2>🎓 Prompts para Criadores de Curso e Infoprodutores <span class="badge">30 Prompts</span></h2>
+        <p class="goal">Prompts prontos para acelerar a criação, lançamento e venda de cursos, mentorias e produtos digitais.</p>
+        <ol class="prompts">
+          <li>Crie um título irresistível para um curso sobre hábitos saudáveis.</li>
+          <li>Me ajude a montar a estrutura de um curso intensivo de 7 dias.</li>
+          <li>Sugira um modelo de página de vendas com storytelling.</li>
+          <li>Elabore um cronograma de conteúdo para um curso de produtividade.</li>
+          <li>Me dê ideias de bônus para aumentar o valor percebido do curso.</li>
+          <li>Como escrever uma promessa forte sem parecer exagerada?</li>
+          <li>Crie uma sequência de e-mails para aquecer leads antes do lançamento.</li>
+          <li>Sugira formas criativas de captar leads com iscas digitais.</li>
+          <li>Me ajude a escolher o melhor formato para um módulo de prática.</li>
+          <li>Monte um modelo de apresentação para vídeo-aulas.</li>
+          <li>Crie 3 scripts curtos para Reels divulgando um curso online.</li>
+          <li>Sugira temas de aulas bônus que encantem alunos.</li>
+          <li>Crie um texto para a página “Sobre o Autor” do curso.</li>
+          <li>Me ajude a montar um funil simples de lançamento.</li>
+          <li>Quais são as principais objeções e como superá-las?</li>
+          <li>Sugira nomes criativos para uma mentoria de negócios.</li>
+          <li>Me ajude a planejar um cronograma de lançamento semente.</li>
+          <li>Como fazer um pitch de vendas durante uma live?</li>
+          <li>Sugira atividades práticas para um curso sobre inteligência emocional.</li>
+          <li>Crie um quiz interativo para gerar leads qualificados.</li>
+          <li>Me ajude a transformar um e-book em um curso rápido.</li>
+          <li>Sugira ideias para uma aula gratuita de pré-lançamento.</li>
+          <li>Como usar provas sociais em páginas de vendas?</li>
+          <li>Me ajude a calcular o preço ideal para meu curso digital.</li>
+          <li>Crie uma proposta de valor clara e diferenciada.</li>
+          <li>Sugira modelos de depoimentos para aumentar conversão.</li>
+          <li>Crie um checklist para revisar o conteúdo antes da entrega.</li>
+          <li>Me ajude a melhorar a experiência do aluno no primeiro login.</li>
+          <li>Sugira formas de manter alunos engajados até o final do curso.</li>
+          <li>Crie um modelo de certificado digital atrativo.</li>
+        </ol>
+      </section>
+
+      <!-- 10. Bônus -->
+      <section id="bonus" class="section">
+        <h2>🧩 BÔNUS – Ferramentas e Plataformas (Zapier, Notion, Canva, etc.) <span class="badge">30 Prompts</span></h2>
+        <p class="goal">Use o poder da IA para automatizar, organizar e criar com mais eficiência nas ferramentas que você já usa.</p>
+        <ol class="prompts">
+          <li>Crie um workflow no Notion para gerenciar projetos com status coloridos.</li>
+          <li>Me ajude a automatizar o envio de leads do Typeform para o Trello via Zapier.</li>
+          <li>Sugira um template de calendário editorial no Notion.</li>
+          <li>Crie uma apresentação criativa no Canva com 5 slides para pitching.</li>
+          <li>Me ajude a configurar alertas automáticos de tarefas atrasadas no ClickUp.</li>
+          <li>Crie um modelo de planejamento semanal com foco em produtividade no Notion.</li>
+          <li>Sugira automações úteis para um infoprodutor usando Zapier.</li>
+          <li>Me ajude a montar um painel de controle pessoal no Notion.</li>
+          <li>Crie uma capa de e-book no Canva com estilo moderno.</li>
+          <li>Monte um modelo de checklist diário no Notion.</li>
+          <li>Sugira ideias de templates no Canva para stories com enquetes.</li>
+          <li>Crie uma automação para enviar e-mails quando uma venda for feita.</li>
+          <li>Me ajude a organizar uma biblioteca de conteúdos com tags no Notion.</li>
+          <li>Sugira um modelo de relatório semanal no Google Sheets automatizado.</li>
+          <li>Crie um cardápio digital interativo no Canva.</li>
+          <li>Me dê um modelo de CRM simples no Notion.</li>
+          <li>Sugira prompts para criar uma linha do tempo de projeto.</li>
+          <li>Crie um sistema de organização pessoal com metas e tarefas no Notion.</li>
+          <li>Como usar o Make para integrar Google Calendar e WhatsApp?</li>
+          <li>Sugira um modelo de mapa mental digital para brainstorming.</li>
+          <li>Crie uma ficha de aluno automatizada com dados coletados via formulário.</li>
+          <li>Me ajude a gerar ideias visuais para banners de produto no Canva.</li>
+          <li>Crie um painel de acompanhamento de vendas no Notion.</li>
+          <li>Sugira um template de planejamento financeiro mensal.</li>
+          <li>Me ajude a organizar um board de ideias no Trello.</li>
+          <li>Crie uma automação de lembrete de reunião semanal.</li>
+          <li>Sugira um dashboard visual para análise de dados.</li>
+          <li>Me dê um template de portfólio criativo no Canva.</li>
+          <li>Crie um sistema de conteúdo recorrente com checklist no Notion.</li>
+          <li>Como gerar PDFs automáticos a partir de formulários preenchidos?</li>
+        </ol>
+      </section>
+
+      <button id="totop" class="top" title="Voltar ao topo">⬆︎ Topo</button>
+
+      <footer>✨ Todos os prompts foram organizados para uso imediato. Personalize os colchetes <code>[ ]</code>, copie e cole no ChatGPT. Bons resultados! ✨</footer>
+    </main>
+  </div>
+
+  <script>
+    // Busca instantânea
+    const input = document.getElementById('q');
+    const lists = Array.from(document.querySelectorAll('ol.prompts'));
+    const sections = Array.from(document.querySelectorAll('.section'));
+    const totop = document.getElementById('totop');
+
+    function normalize(s){ return (s||'').toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,''); }
+
+    input.addEventListener('input', () => {
+      const q = normalize(input.value.trim());
+      let matchesTotal = 0;
+
+      sections.forEach(section => {
+        let anyVisible = false;
+        const items = section.querySelectorAll('ol.prompts > li');
+        items.forEach(li => {
+          const text = normalize(li.textContent);
+          const show = !q || text.includes(q);
+          li.style.display = show ? '' : 'none';
+          if (show) { anyVisible = true; matchesTotal++; }
+        });
+        section.style.display = anyVisible ? '' : (q ? 'none' : '');
+      });
+
+      // Atualiza título com contagem de resultados (opcional)
+      document.title = q ? `Resultados: ${matchesTotal} — Catálogo de Prompts` : 'Catálogo — 300 Prompts Poderosos para ChatGPT';
+    });
+
+    // Botão de voltar ao topo
+    window.addEventListener('scroll', () => {
+      totop.style.display = window.scrollY > 600 ? 'inline-block' : 'none';
+    });
+    totop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+  </script>
+</body>
+</html>
